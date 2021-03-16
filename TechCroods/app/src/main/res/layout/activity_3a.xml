@@ -11,8 +11,8 @@
         android:id="@+id/btn1"
         android:layout_width="152dp"
         android:layout_height="52dp"
-        android:backgroundTint="#B97EE4"
         android:text="Fix For Morning"
+        android:background="#B97EE4"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.281"
@@ -24,37 +24,39 @@
         android:id="@+id/btn2"
         android:layout_width="152dp"
         android:layout_height="52dp"
-        android:backgroundTint="#B97EE4"
+        android:background="#B97EE4"
         android:text="Fix For Afternoon"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.368" />
+        app:layout_constraintVertical_bias="0.354" />
 
     <Button
         android:id="@+id/btn3"
         android:layout_width="152dp"
         android:layout_height="52dp"
-        android:backgroundTint="#B97EE4"
+        android:background="#B97EE4"
         android:text="Fix For Evening"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.266"
+        app:layout_constraintHorizontal_bias="0.281"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.541" />
+        app:layout_constraintVertical_bias="0.499">
+
+    </Button>
 
     <LinearLayout
-        android:layout_width="303dp"
-        android:layout_height="186dp"
+        android:layout_width="301dp"
+        android:layout_height="173dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.874"
+        app:layout_constraintVertical_bias="0.767"
         tools:ignore="MissingConstraints">
 
         <TextView
@@ -92,7 +94,7 @@
         android:layout_height="46dp"
         android:background="#131019"
         android:gravity="center_horizontal"
-        android:text="Fix Appoinments"
+        android:text="Fix Appoinments For Today"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="23dp"
@@ -102,5 +104,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.084" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="152dp"
+        android:layout_height="52dp"
+        android:background="#B97EE4"
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923">
+
+    </Button>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

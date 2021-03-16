@@ -2,10 +2,13 @@ package com.example.techcroods;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,7 +16,9 @@ import android.widget.Toast;
 public class Activity3a extends AppCompatActivity {
 
     TextView t1, t2, t3;
-    Button mrng, aftrn, evng;
+    Button mrng, aftrn, evng, next;
+    DatePickerDialog datePkr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +39,7 @@ public class Activity3a extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(getApplicationContext(),"Fixed morning appointment to "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                        t1.setText("Morning Appointmet: "+item.getTitle());
+                        t1.setText("Morning Appointment: " +item.getTitle());
                         return true;
                     }
                 });
@@ -53,7 +58,7 @@ public class Activity3a extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(getApplicationContext(),"Fixed afternoon appointment to "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                        t2.setText("Afternoon Appointmet: "+item.getTitle());
+                        t2.setText("Afternoon Appointment: " +item.getTitle());
                         return true;
                     }
                 });
@@ -70,9 +75,9 @@ public class Activity3a extends AppCompatActivity {
                 p.getMenuInflater().inflate(R.menu.popup, p.getMenu());
                 p.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
                     @Override
-                    public boolean onMenuItemClick(MenuItem item) {
+                    public boolean onMenuItemClick(final MenuItem item) {
                         Toast.makeText(getApplicationContext(),"Fixed evening appointment to "+item.getTitle(),Toast.LENGTH_SHORT).show();
-                        t3.setText("Evening Appointmet: "+item.getTitle());
+                        t3.setText("Evening Appointment: " +item.getTitle());
                         return true;
                     }
                 });
@@ -80,5 +85,21 @@ public class Activity3a extends AppCompatActivity {
             }
         });
 
+        next = (Button)findViewById(R.id.btnNext);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent act4 = new Intent(getApplicationContext(),Activity4.class);
+                startActivity(act4);
+            }
+        });
+
     }
+
+/*
+    protected String getMyDate(){
+        StringBuilder sb = new StringBuilder();
+        sb.append(datePkr.getMonth()+1);
+        return sb.toString();
+    }*/
 }
